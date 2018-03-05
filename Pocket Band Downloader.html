@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Song Downloader</title>
+		<style>
+		body {
+		 margin: 0px;
+		}
+		iframe {
+		 width: 100%;
+		 height: 70%;
+		 
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Pocket Band Downloader - Computer Only!!!</h1>
+		<!--<input id="url" value="https://pocketband.net/" placeholder="Put Pocket Band Url Here" />
+		<p id="submit">Submit</p>
+		<iframe id="pframe" src="https://pocketband.net/"></iframe>-->
+		<h2>In inspect element, paste the following code</h2>
+		<h3><code>function retUrl() {var url = document.getElementsByClassName('song-play')[0];location = url;} retUrl();</code></h3>
+	</body>
+	<script>
+		const download = () => {
+		 document.getElementById('pframe').src = document.getElementById('url').value;
+		 var pframe = document.getElementById('frame');
+		}
+		
+		document.getElementById('submit').onclick = () => {
+		 download();
+		}
+	</script>
+</html>
